@@ -1,10 +1,8 @@
 public class Main {
     public static void main(String[] args) {
-
-        int ticketCost = 13676; // Переменная, в которой хранится стоимость билета
-        int milePerCost = 20; // Переменная, в которой хранится количество рублей для одной бонусной мили
-        int mileForBonus = ticketCost / milePerCost; // Переменная, в которой хранится ответ по формуле расчета бонусов
-        System.out.println("Мили к начислению: " + mileForBonus);
-
+        BonusMilesService service = new BonusMilesService();
+        int price = 10_000;
+        int miles = service.calculate(price); // должно получиться 500
+        System.out.println(miles);
     }
 }
